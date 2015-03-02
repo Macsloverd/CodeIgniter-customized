@@ -44,6 +44,6 @@ It is the main dependency of UIkit and possibly others. I will update it reqular
 Generally:
 * All orginal legal owner of the components included in this project has the ultimate copyright and please use according to their licenses and conditions.
 * All scipts that I have written included in this project are licensed to any one, who would like to use it, freely and free of any charge.
-* All programmes and scripts here in this project are provided 'as is', use at your own risk and I, personally, will not be held for any issue caused by using the whole or part of this project.
+* All programmes and scripts here in this project are provided 'as is', use at your own risk and I, personally, will not be held responsible for any issue caused by using the whole or part of this project.
 
 Please follow the licenses and conditions within each file for proper usage.
