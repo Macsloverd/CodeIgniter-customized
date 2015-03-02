@@ -6,17 +6,17 @@
  * Global configuration settings that apply to all DataMapped models.
  */
 
-$config['prefix'] = getenv('OPENSHIFT_MYSQL_DB_PREFIX');
-$config['join_prefix'] = '';
-$config['error_prefix'] = '<p>';
-$config['error_suffix'] = '</p>';
-$config['created_field'] = 'created';
-$config['updated_field'] = 'updated';
-$config['local_time'] = FALSE;
-$config['unix_timestamp'] = FALSE;
-$config['auto_transaction'] = FALSE;
+$config['prefix']                 = getenv('OPENSHIFT_APP_NAME') ? getenv('OPENSHIFT_MYSQL_DB_PREFIX') : '';
+$config['join_prefix']            = '';
+$config['error_prefix']           = '<p>';
+$config['error_suffix']           = '</p>';
+$config['created_field']          = 'created';
+$config['updated_field']          = 'updated';
+$config['local_time']             = FALSE;
+$config['unix_timestamp']         = FALSE;
+$config['auto_transaction']       = FALSE;
 $config['auto_populate_has_many'] = FALSE;
-$config['auto_populate_has_one'] = FALSE;
+$config['auto_populate_has_one']  = FALSE;
 
 /* End of file datamapper.php */
 /* Location: ./application/config/datamapper.php */
