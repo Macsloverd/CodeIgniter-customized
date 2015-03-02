@@ -8,6 +8,7 @@ This is a Customized CodeIgniter Framework for my specific working environment. 
 * etc.
 
 ## Current Components and Versions
+> Last check for versions: 02-MAR-2015
 * [CodeIgniter](https://github.com/bcit-ci/CodeIgniter) | [2.2.1 stable + security fixes](https://github.com/bcit-ci/CodeIgniter/tree/2.2-stable)
 * [DataMapper](http://stensi.com/datamapper/index.html) | [1.6.0](http://stensi.com/datamapper/pages/download.html)
 * [UIkit](http://getuikit.com) | [2.17.0](https://github.com/uikit/uikit/releases/download/v2.17.0/uikit-2.17.0.zip)
@@ -44,6 +45,6 @@ It is the main dependency of UIkit and possibly others. I will update it reqular
 Generally:
 * All orginal legal owner of the components included in this project has the ultimate copyright and please use according to their licenses and conditions.
 * All scipts that I have written included in this project are licensed to any one, who would like to use it, freely and free of any charge.
-* All programmes and scripts here in this project are provided 'as is', use at your own risk and I, personally, will not be held responsible for any issue caused by using the whole or part of this project.
+* All programmes and scripts here in this project are provided 'as-is', use at your own risk and I, personally, will not be held responsible for any issue caused by using the whole or part of this project.
 
 Please follow the licenses and conditions within each file for proper usage.
