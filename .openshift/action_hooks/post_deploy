@@ -1,0 +1,31 @@
+#!/bin/bash
+# This is a simple post deploy hook executed after your application 
+# is deployed and started.  This script gets executed directly, so 
+# it could be python, php, ruby, etc.
+
+# check & create CodeIgniter Folder
+if [ ! -d $OPENSHIFT_DATA_DIR/ci ]; then
+	mkdir $OPENSHIFT_DATA_DIR/ci
+fi
+
+# check & create CodeIgniter System folder
+if [ ! -d $OPENSHIFT_DATA_DIR/ci/system ]; then
+	mkdir $OPENSHIFT_DATA_DIR/ci/system
+fi
+
+# check & create CodeIgniter Application folder
+if [ ! -d $OPENSHIFT_DATA_DIR/ci/application ]; then
+	mkdir $OPENSHIFT_DATA_DIR/ci/application
+fi
+
+# update CodeIgniter System folder
+cp -dprx $OPENSHIFT_REPO_DIR/system/* $OPENSHIFT_DATA_DIR/ci/system/
+# update CodeIgniter Application folder
+cp -dprx $OPENSHIFT_REPO_DIR/application/* $OPENSHIFT_DATA_DIR/ci/application/
+
+# secure the CodeIgniter - change the mode according to your own specs, 644 is not working
+chmod 775 $OPENSHIFT_DATA_DIR/ci/*
+chmod 775 $OPENSHIFT_REPO_DIR/index.php
+# remove the exposure
+rm -r $OPENSHIFT_REPO_DIR/system
+rm -r $OPENSHIFT_REPO_DIR/application

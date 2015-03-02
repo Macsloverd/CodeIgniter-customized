@@ -45,7 +45,7 @@
 | the active record class
 */
 
-$active_group = 'default';
+$active_group = getenv('OPENSHIFT_APP_NAME') ? 'OPENSHIFT' : 'default';
 $active_record = TRUE;
 
 $db['default']['hostname'] = 'localhost';
@@ -63,6 +63,24 @@ $db['default']['dbcollat'] = 'utf8_general_ci';
 $db['default']['swap_pre'] = '';
 $db['default']['autoinit'] = TRUE;
 $db['default']['stricton'] = FALSE;
+
+//---OPENSHIFT---//
+
+$db['OPENSHIFT']['hostname'] = getenv('OPENSHIFT_MYSQL_DB_HOST');
+$db['OPENSHIFT']['username'] = getenv('OPENSHIFT_MYSQL_DB_USERNAME');
+$db['OPENSHIFT']['password'] = getenv('OPENSHIFT_MYSQL_DB_PASSWORD');
+$db['OPENSHIFT']['database'] = getenv('OPENSHIFT_MYSQL_DB_NAME');
+$db['OPENSHIFT']['dbdriver'] = getenv('OPENSHIFT_MYSQL_DB_DRIVER');
+$db['OPENSHIFT']['char_set'] = getenv('OPENSHIFT_MYSQL_DB_CHARSET');
+$db['OPENSHIFT']['dbcollat'] = getenv('OPENSHIFT_MYSQL_DB_COLLAT');
+$db['OPENSHIFT']['cachedir'] = getenv('OPENSHIFT_TMP_DIR');
+$db['OPENSHIFT']['pconnect'] = TRUE;
+$db['OPENSHIFT']['db_debug'] = TRUE;
+$db['OPENSHIFT']['autoinit'] = TRUE;
+$db['OPENSHIFT']['cache_on'] = FALSE;
+$db['OPENSHIFT']['stricton'] = FALSE;
+$db['OPENSHIFT']['dbprefix'] = '';
+$db['OPENSHIFT']['swap_pre'] = '';
 
 
 /* End of file database.php */
